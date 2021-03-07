@@ -202,7 +202,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
-  document.querySelector('.mainServices__right-button.active').disabled = true;
+  var active = document.querySelector('.mainServices__right-button.active');
+
+  if (active != null) {
+    active.disabled = true;
+  }
+
   $('.mainServices__right-button').on('click', function () {
     var btns = document.querySelectorAll('.mainServices__right-button');
     console.log('hey');
@@ -244,15 +249,7 @@ __webpack_require__.r(__webpack_exports__);
         servSwiper.destroy();
       }
     }
-
-    reinitSwiper();
   });
-
-  function reinitSwiper(servSwiper) {
-    setTimeout(function () {
-      servSwiper.update();
-    }, 500);
-  }
 });
 
 /***/ }),
@@ -389,12 +386,14 @@ __webpack_require__.r(__webpack_exports__);
 // import shares from '@blocks/shares/shares';
 // import modal from '@layouts/modal/modal';
 // import svg4everybody from 'svg4everybody/dist/svg4everybody.min';
-// $('.nav a').each(function () {
-//   if (this.href == location.href) {
-//     $(this).addClass('active');
-//   }
-// });
 
+$('.navUtility__item-link').each(function () {
+  if (this.href == location.href) {
+    this.disabled = true;
+    $(this).attr('tabindex', -1);
+    $(this).addClass('active');
+  }
+});
 $(function () {
   // svg4everybody();
   // $('svg').attr('focusable', 'false');

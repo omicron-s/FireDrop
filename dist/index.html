@@ -32,18 +32,32 @@
                 <li class="nav__item"><a class="nav__item-link" href="faq.html">F.A.Q.</a></li>
               </ul>
             </nav>
+            <button class="button">Обратный звонок</button>
           </div>
           <div class="header__right"><a class="header__right-phone" href="tel:88801231212">8 880 123-12-12</a>
             <button class="button">Обратный звонок</button>
+            <button class="button-burger"><span class="top"></span><span class="mid"></span><span class="bot"></span></button>
           </div>
         </div>
       </div>
     </header>
     <div class="heading">
       <div class="heading__row">
-        <div class="swiper-container">
+        <div class="swiper-container" id="headingSlider">
           <div class="swiper-wrapper"> 
             <div class="swiper-slide" style="background-image: url('img/heading/bg-main.jpg')">
+              <div class="container">
+                <h1 class="title-h1">Производим вертикальные сборные резервуары</h1><b class="heading__subtitle">со сроком службы более 30 лет</b>
+                <button class="button">Получить расчет и КП</button>
+              </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/heading/bg-main1.jpg')">
+              <div class="container">
+                <h1 class="title-h1">lorem title!!!</h1><b class="heading__subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error cumque suscipit nostrum, sunt quos, eaque facilis doloremque fuga beatae vel culpa sapiente hic. Soluta, corporis debitis fuga reiciendis neque sunt!</b>
+                <button class="button">lorem button!</button>
+              </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url('img/heading/bg-main2.jpg')">
               <div class="container">
                 <h1 class="title-h1">Производим вертикальные сборные резервуары</h1><b class="heading__subtitle">со сроком службы более 30 лет</b>
                 <button class="button">Получить расчет и КП</button>
@@ -52,31 +66,46 @@
           </div>
         </div>
       </div>
+      <div class="swiper-pagination" id="headingPagination"></div>
       <div class="heading__fixed-row">
         <div class="heading__slider-control">
           <div class="slider__quantity"> <span class="slider__quantity-1st">01</span><span class="slider__quantity-2nd">03</span></div>
           <div class="slider__buttons"> 
-            <button class="swiper-button-prev"></button>
-            <button class="swiper-button-next"></button>
+            <button class="swiper-button-prev" id="headingSliderPrev"></button>
+            <button class="swiper-button-next" id="headingSliderNext"></button>
           </div>
         </div>
         <div class="heading__nav-utility">
           <nav class="navUtility white"> 
             <ul class="navUtility__list">
               <li class="navUtility__item"><a class="navUtility__item-link" href="sbornye-rezervuary.html">
-                  <div class="navUtility__item-img"> <img src="img/nav-service/tank-w.png" alt=""/></div><span class="navUtility__item-text">Сборные резервуары</span></a></li>
+                  <picture class="navUtility__item-img"> 
+                    <source srcset="img/nav-service/tank.png" media="(max-width:767px)"/><img src="img/nav-service/tank-w.png" alt=""/>
+                  </picture><span class="navUtility__item-text">Сборные резервуары</span></a></li>
               <li class="navUtility__item"><a class="navUtility__item-link" href="nasosnye-stancii.html">
-                  <div class="navUtility__item-img"> <img src="img/nav-service/station-w.png" alt=""/></div><span class="navUtility__item-text">Насосные станции</span></a></li>
+                  <picture class="navUtility__item-img"> 
+                    <source srcset="img/nav-service/station.png" media="(max-width:767px)"/><img src="img/nav-service/station-w.png" alt=""/>
+                  </picture><span class="navUtility__item-text">Насосные станции</span></a></li>
               <li class="navUtility__item"><a class="navUtility__item-link" href="oborudovanie.html">
-                  <div class="navUtility__item-img"> <img src="img/nav-service/equip-w.png" alt=""/></div><span class="navUtility__item-text">Оборудование «Rapid drop»</span></a></li>
+                  <picture class="navUtility__item-img"> 
+                    <source srcset="img/nav-service/equip.png" media="(max-width:767px)"/><img src="img/nav-service/equip-w.png" alt=""/>
+                  </picture><span class="navUtility__item-text">Оборудование «Rapid drop»</span></a></li>
               <li class="navUtility__item"><a class="navUtility__item-link" href="trubnye-zagotovki.html">
-                  <div class="navUtility__item-img"> <img src="img/nav-service/tubes-w.png" alt=""/></div><span class="navUtility__item-text">Трубные заготовки</span></a></li>
+                  <picture class="navUtility__item-img"> 
+                    <source srcset="img/nav-service/tubes.png" media="(max-width:767px)"/><img src="img/nav-service/tubes-w.png" alt=""/>
+                  </picture><span class="navUtility__item-text">Трубные заготовки</span></a></li>
               <li class="navUtility__item"><a class="navUtility__item-link" href="montaj.html">
-                  <div class="navUtility__item-img"> <img src="img/nav-service/install-w.png" alt=""/></div><span class="navUtility__item-text">Монтаж</span></a></li>
+                  <picture class="navUtility__item-img"> 
+                    <source srcset="img/nav-service/install.png" media="(max-width:767px)"/><img src="img/nav-service/install-w.png" alt=""/>
+                  </picture><span class="navUtility__item-text">Монтаж</span></a></li>
               <li class="navUtility__item"><a class="navUtility__item-link" href="servis.html">
-                  <div class="navUtility__item-img"> <img src="img/nav-service/service-w.png" alt=""/></div><span class="navUtility__item-text">Сервис</span></a></li>
+                  <picture class="navUtility__item-img"> 
+                    <source srcset="img/nav-service/service.png" media="(max-width:767px)"/><img src="img/nav-service/service-w.png" alt=""/>
+                  </picture><span class="navUtility__item-text">Сервис</span></a></li>
               <li class="navUtility__item"><a class="navUtility__item-link" href="proekty.html">
-                  <div class="navUtility__item-img"> <img src="img/nav-service/project-w.png" alt=""/></div><span class="navUtility__item-text">Проектировщикам</span></a></li>
+                  <picture class="navUtility__item-img"> 
+                    <source srcset="img/nav-service/project.png" media="(max-width:767px)"/><img src="img/nav-service/project-w.png" alt=""/>
+                  </picture><span class="navUtility__item-text">Проектировщикам</span></a></li>
             </ul>
           </nav>
         </div>
@@ -85,9 +114,9 @@
     <main> 
       <section class="mainAbout">
         <div class="container">
+          <h2 class="title-h2">О компании</h2>
           <div class="row">
-            <div class="mainAbout__left">
-              <h2 class="title-h2">О компании</h2><b class="mainAbout-subtitle">Fire Drop – успешная компания, <br>которая функционирует с 2008 года.</b>
+            <div class="mainAbout__left"><b class="mainAbout-subtitle">Fire Drop – успешная компания, <br>которая функционирует с 2008 года.</b>
               <p class="mainAbout-text">Приоритетное направление деятельности Fire Drop – проектирование, разработка и установка стальных ёмкостей, которые применяются для транспортировки и хранения питьевой воды, а также воды предназначенной для использования в противопожарных и технических целях. Кроме того, компания специализируется на разработке проектов и сооружении «под ключ» наносных станций, которые являются составляющей систем водоснабжения и пожаротушения.</p><a class="button" href="#">Подробнее</a>
             </div>
             <div class="mainAbout__right"> 
@@ -101,28 +130,30 @@
           <div class="row-sb"> 
             <div class="mainServices__left">
               <h2 class="mainServices__left-title">Какие услуги мы оказываем</h2>
-              <ul class="mainServices__service-wrapper">
-                      <li class="mainServices__service active" data-service="proj">
-                        <h3 class="title-h2">Проектирование</h3>
-                        <p class="mainServices__left-text">Отдел по проектированию выполняет полный комлпекс работ для того, чтобы обеспечить качественное сопровождение рабочей документации в соответствии с техническим заданием и соответствующих требований действующих норм, а также осуществляет разработку сметных расчетов.</p><a class="button" href="#">Заказать услугу</a>
-                      </li>
-                      <li class="mainServices__service" data-service="prod">
-                        <h3 class="title-h2">Производство</h3>
-                        <p class="mainServices__left-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, laborum blanditiis tenetur voluptates odit, minus fugit non adipisci nisi hic, suscipit perspiciatis recusandae ipsa deleniti id vero corrupti deserunt. Laborum?</p><a class="button" href="#">Заказать услугу</a>
-                      </li>
-                      <li class="mainServices__service" data-service="sup">
-                        <h3 class="title-h2">Поставка</h3>
-                        <p class="mainServices__left-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, laborum blanditiis tenetur voluptates odit, minus fugit non adipisci nisi hic, suscipit perspiciatis recusandae ipsa deleniti id vero corrupti deserunt. Laborum?</p><a class="button" href="#">Заказать услугу</a>
-                      </li>
-                      <li class="mainServices__service" data-service="assem">
-                        <h3 class="title-h2">Монтаж</h3>
-                        <p class="mainServices__left-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, laborum blanditiis tenetur voluptates odit, minus fugit non adipisci nisi hic, suscipit perspiciatis recusandae ipsa deleniti id vero corrupti deserunt. Laborum?</p><a class="button" href="#">Заказать услугу</a>
-                      </li>
-                      <li class="mainServices__service" data-service="equip">
-                        <h3 class="title-h2">Сервисное оборудование</h3>
-                        <p class="mainServices__left-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, laborum blanditiis tenetur voluptates odit, minus fugit non adipisci nisi hic, suscipit perspiciatis recusandae ipsa deleniti id vero corrupti deserunt. Laborum?</p><a class="button" href="#">Заказать услугу</a>
-                      </li>
-              </ul>
+              <div class="swiper-container" id="mainServSlider">
+                <div class="swiper-wrapper">
+                        <div class="swiper-slide mainServices__service active" data-service="proj">
+                          <h3 class="title-h2">Проектирование</h3>
+                          <p class="mainServices__left-text">Отдел по проектированию выполняет полный комлпекс работ для того, чтобы обеспечить качественное сопровождение рабочей документации в соответствии с техническим заданием и соответствующих требований действующих норм, а также осуществляет разработку сметных расчетов.</p><a class="button" href="#">Заказать услугу</a>
+                        </div>
+                        <div class="swiper-slide mainServices__service" data-service="prod">
+                          <h3 class="title-h2">Производство</h3>
+                          <p class="mainServices__left-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, laborum blanditiis tenetur voluptates odit, minus fugit non adipisci nisi hic, suscipit perspiciatis recusandae ipsa deleniti id vero corrupti deserunt. Laborum?</p><a class="button" href="#">Заказать услугу</a>
+                        </div>
+                        <div class="swiper-slide mainServices__service" data-service="sup">
+                          <h3 class="title-h2">Поставка</h3>
+                          <p class="mainServices__left-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, laborum blanditiis tenetur voluptates odit, minus fugit non adipisci nisi hic, suscipit perspiciatis recusandae ipsa deleniti id vero corrupti deserunt. Laborum?</p><a class="button" href="#">Заказать услугу</a>
+                        </div>
+                        <div class="swiper-slide mainServices__service" data-service="assem">
+                          <h3 class="title-h2">Монтаж</h3>
+                          <p class="mainServices__left-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, laborum blanditiis tenetur voluptates odit, minus fugit non adipisci nisi hic, suscipit perspiciatis recusandae ipsa deleniti id vero corrupti deserunt. Laborum?</p><a class="button" href="#">Заказать услугу</a>
+                        </div>
+                        <div class="swiper-slide mainServices__service" data-service="equip">
+                          <h3 class="title-h2">Сервисное оборудование</h3>
+                          <p class="mainServices__left-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, laborum blanditiis tenetur voluptates odit, minus fugit non adipisci nisi hic, suscipit perspiciatis recusandae ipsa deleniti id vero corrupti deserunt. Laborum?</p><a class="button" href="#">Заказать услугу</a>
+                        </div>
+                </div>
+              </div>
             </div>
             <div class="mainServices__right">
               <ul class="mainServices__right-list">
@@ -145,6 +176,7 @@
             </div>
           </div>
         </div>
+        <div class="swiper-pagination" id="mainServPage"></div>
       </section>
       <section class="mainLocation">
         <div class="container">
@@ -170,12 +202,12 @@
             <div class="trust__left">
               <div class="slider__quantity"> <span class="slider__quantity-1st">01</span><span class="slider__quantity-2nd">03</span></div>
               <div class="slider__buttons"> 
-                <button class="swiper-button-prev"></button>
-                <button class="swiper-button-next"></button>
+                <button class="swiper-button-prev" id="trustSliderPrev"></button>
+                <button class="swiper-button-next" id="trustSliderNext"></button>
               </div>
             </div>
             <div class="trust__right"> 
-              <div class="swiper-container"> 
+              <div class="swiper-container" id="trustSlider">
                 <div class="swiper-wrapper"> 
                   <div class="swiper-slide"><img src="img/trust/ikea.png" alt="Бренд IKEA"></div>
                   <div class="swiper-slide"><img src="img/trust/mim.png" alt="Бренд Metallimpress"></div>
@@ -199,7 +231,7 @@
                 <input class="input" type="email" placeholder="E-mail *" title="E-mail" id="formEmail">
                 <textarea class="input" placeholder="Комментарий" title="Комментарий" id="formDesc"></textarea>
                 <button class="button" id="formSubmit">Отправить заявку</button>
-              </div><small class="help__right-personal">Нажимая на кнопку «Отправить», я подтверждаю,<br>что ознакомился с соглашением на обработку <a href="#" target="_blank">персональных данных</a></small>
+              </div><small class="help__right-personal">Нажимая на кнопку «Отправить», я подтверждаю,<br> что ознакомился с соглашением на обработку <a href="#" target="_blank">персональных данных</a></small>
             </div>
           </div>
         </div>
@@ -215,6 +247,7 @@
             </div>
           </div>
           <div class="row">
+            <div class="swiper-pagination blue"></div>
             <div class="slider__buttons"> 
               <button class="swiper-button-prev black"></button>
               <button class="swiper-button-next black"></button>

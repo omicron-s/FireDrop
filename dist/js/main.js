@@ -387,6 +387,13 @@ __webpack_require__.r(__webpack_exports__);
 // import modal from '@layouts/modal/modal';
 // import svg4everybody from 'svg4everybody/dist/svg4everybody.min';
 
+$('.nav__item-link').each(function () {
+  if (this.href == location.href) {
+    this.disabled = true;
+    $(this).attr('tabindex', -1);
+    $(this).addClass('active');
+  }
+});
 $('.navUtility__item-link').each(function () {
   if (this.href == location.href) {
     this.disabled = true;

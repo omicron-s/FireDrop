@@ -737,6 +737,8 @@ small {
 
 .section-item::before {
   content: "";
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   position: absolute;
   top: 6px;
   left: 0;
@@ -744,8 +746,6 @@ small {
   height: 8px;
   border-radius: 50%;
   background-color: #3a4b84;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
 }
 
 .section-text {
@@ -837,6 +837,34 @@ textarea.input {
   height: 100px;
   min-height: 100px;
   resize: none;
+}
+
+.input-file {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.input-file:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.input-file input {
+  display: none;
+}
+
+.input-file img {
+  margin-right: 8px;
+}
+
+.input-file span {
+  color: #596088;
 }
 
 .slider__quantity {
@@ -1112,6 +1140,96 @@ textarea.input {
 .swiper-pagination-bullet-active {
   pointer-events: none;
   cursor: default;
+}
+
+.career {
+  padding: 40px 0 90px;
+}
+
+.career .title-h2 {
+  margin-bottom: 40px;
+}
+
+.career__left {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 520px;
+  flex: 0 1 520px;
+  font-weight: 600;
+  margin-right: 30px;
+  font-size: 18px;
+}
+
+.career__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 520px;
+  flex: 0 1 520px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.career__right .section-list {
+  margin-bottom: 20px;
+}
+
+.career__right-title {
+  margin-bottom: 30px;
+}
+
+.vacancy {
+  padding: 60px 0 90px;
+  background-color: #f6f7fb;
+}
+
+.vacancy .title-h2 {
+  margin-bottom: 60px;
+}
+
+.vacancy__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.vacancy__item:not(:last-child) {
+  margin-bottom: 55px;
+}
+
+.vacancy__left {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 200px;
+  flex: 0 0 200px;
+}
+
+.vacancy__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 800px;
+  flex: 0 1 800px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.vacancy__right .button {
+  width: 200px !important;
+  margin: 0 !important;
+}
+
+.vacancy__right-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.vacancy__right-text {
+  margin: 0 0 30px;
 }
 
 .catalog {
@@ -1811,6 +1929,15 @@ textarea.input {
 
 .newspage__same .title-h2 {
   margin-bottom: 40px;
+}
+
+.resume .help__left {
+  -ms-flex-preferred-size: 500px;
+  flex-basis: 500px;
+}
+
+.resume .input-file {
+  margin-bottom: 50px;
 }
 
 .slider {
@@ -2789,6 +2916,22 @@ html.fixed .modal-overlay {
     font-size: 16px;
   }
 
+  .career {
+    padding: 30px 0 60px;
+  }
+
+  .career .title-h2 {
+    margin-bottom: 30px;
+  }
+
+  .vacancy {
+    padding: 40px 0 60px;
+  }
+
+  .vacancy .title-h2 {
+    margin-bottom: 50px;
+  }
+
   .catalog {
     padding: 30px 0 40px;
   }
@@ -3070,6 +3213,69 @@ html.fixed .modal-overlay {
   .swiper-button-next {
     width: 46px;
     height: 46px;
+  }
+
+  .career {
+    padding: 20px 0 30px;
+  }
+
+  .career .title-h2 {
+    margin-bottom: 20px;
+  }
+
+  .career .row-sb {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .career__left {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .career__right {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+  }
+
+  .career__right .section-list {
+    margin-bottom: 0;
+  }
+
+  .career__right-title {
+    margin-bottom: 20px;
+  }
+
+  .vacancy {
+    padding: 30px 0 40px;
+  }
+
+  .vacancy .title-h2 {
+    margin-bottom: 40px;
+  }
+
+  .vacancy__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .vacancy__left {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    margin-bottom: 20px;
+  }
+
+  .vacancy__right {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
   }
 
   .catalog {
@@ -3369,6 +3575,11 @@ html.fixed .modal-overlay {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 40px;
     flex: 0 0 40px;
+  }
+
+  .resume .help__left {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
   }
 
   .slider {

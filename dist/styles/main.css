@@ -1232,6 +1232,35 @@ textarea.input {
   margin: 0 0 30px;
 }
 
+.work {
+  padding: 40px 0 50px;
+}
+
+.work .title-h2 {
+  margin-bottom: 40px;
+}
+
+.work .button {
+  width: 260px;
+}
+
+.work__subtitle {
+  display: block;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #222020;
+}
+
+.work__list {
+  margin-bottom: 40px;
+}
+
+.work__list-title {
+  color: #222020;
+  margin-bottom: 25px;
+}
+
 .catalog {
   padding: 40px 0 75px;
 }
@@ -2932,6 +2961,14 @@ html.fixed .modal-overlay {
     margin-bottom: 50px;
   }
 
+  .work {
+    padding: 30px 0 40px;
+  }
+
+  .work .title-h2 {
+    margin-bottom: 30px;
+  }
+
   .catalog {
     padding: 30px 0 40px;
   }
@@ -3276,6 +3313,18 @@ html.fixed .modal-overlay {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
+  }
+
+  .work {
+    padding: 20px 0 30px;
+  }
+
+  .work .title-h2 {
+    margin-bottom: 20px;
+  }
+
+  .work__subtitle {
+    margin-bottom: 20px;
   }
 
   .catalog {

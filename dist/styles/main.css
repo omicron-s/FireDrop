@@ -1340,8 +1340,8 @@ textarea.input {
 
 .help__left {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 420px;
-  flex: 0 0 420px;
+  -ms-flex: 0 0 500px;
+  flex: 0 0 500px;
 }
 
 .help__right {
@@ -1960,11 +1960,6 @@ textarea.input {
   margin-bottom: 40px;
 }
 
-.resume .help__left {
-  -ms-flex-preferred-size: 500px;
-  flex-basis: 500px;
-}
-
 .resume .input-file {
   margin-bottom: 50px;
 }
@@ -2045,6 +2040,116 @@ textarea.input {
   -ms-flex: 0 1 600px;
   flex: 0 1 600px;
   margin-left: 30px;
+}
+
+.technical {
+  padding: 40px 0 60px;
+}
+
+.technical .title-h2 {
+  margin-bottom: 50px;
+}
+
+.technical__subtitle {
+  font-size: 24px;
+  color: #222020;
+  margin-bottom: 35px;
+  display: block;
+}
+
+.technical__list {
+  border-top: 1px solid #d0d6e2;
+}
+
+.technical__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100px;
+  border-bottom: 1px solid #d0d6e2;
+}
+
+.technical__item-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 80px;
+  flex: 0 0 80px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.technical__item-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 6px;
+}
+
+.technical__item-size {
+  font-size: 12px;
+  color: #9a9eb6;
+}
+
+.technical__item-title {
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 15px;
+  color: #222020;
+}
+
+.technical__item-title:hover {
+  opacity: 0.8;
+}
+
+.technical__item-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  font-size: 14px;
+  color: #3a4b84;
+  margin-left: auto;
+  font-weight: 700;
+}
+
+.technical__item-link:hover {
+  opacity: 0.8;
+}
+
+.technical__item-link::before {
+  margin-right: 13px;
+  content: url("../img/icons/download.svg");
 }
 
 .trust {
@@ -3139,6 +3244,37 @@ html.fixed .modal-overlay {
     font-size: 20px;
   }
 
+  .technical {
+    padding: 30px 0 40px;
+  }
+
+  .technical .title-h2 {
+    margin-bottom: 40px;
+  }
+
+  .technical__subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .technical__item {
+    height: 80px;
+  }
+
+  .technical__item-type {
+    -ms-flex-preferred-size: 60px;
+    flex-basis: 60px;
+  }
+
+  .technical__item-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .technical__item-title {
+    font-size: 16px;
+  }
+
   .trust {
     padding: 40px 0 80px;
   }
@@ -3626,11 +3762,6 @@ html.fixed .modal-overlay {
     flex: 0 0 40px;
   }
 
-  .resume .help__left {
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
-  }
-
   .slider {
     padding: 20px 0 30px;
   }
@@ -3696,6 +3827,47 @@ html.fixed .modal-overlay {
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
     margin: 0;
+  }
+
+  .technical {
+    padding: 20px 0 30px;
+  }
+
+  .technical .title-h2 {
+    margin-bottom: 30px;
+  }
+
+  .technical__subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .technical__item-type {
+    -ms-flex-preferred-size: 0 0 40px;
+    flex-basis: 0 0 40px;
+  }
+
+  .technical__item-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .technical__item-size {
+    font-size: 10px;
+  }
+
+  .technical__item-title {
+    font-size: 14px;
+  }
+
+  .technical__item-link {
+    font-size: 12px;
+  }
+
+  .technical__item-link::before {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    margin-right: 6px;
   }
 
   .trust {

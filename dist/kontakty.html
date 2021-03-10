@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Карьера</title>
+    <title>Контакты</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./img/favicons/favicon.png" type="image/png">
     <link rel="stylesheet" href="./styles/main.css">
@@ -91,66 +91,44 @@
         </nav>
         <ul class="broads__links"> 
           <li class="broads__links-item"><a href="index.html">Главная</a></li>
-          <li class="broads__links-item"><a href="#">Карьера</a></li>
+          <li class="broads__links-item"><a href="#">Контакты</a></li>
         </ul>
       </div>
     </div>
     <main> 
-      <section class="career"> 
-        <div class="container">
-          <h2 class="title-h2">Карьера</h2>
+      <section class="section-padding conctacts">
+        <div class="container"> 
+          <h2 class="section-title title-h2">Контакты</h2>
           <div class="row-sb">
-            <div class="career__left"><b>Компания Fire Drop – это команда профессионалов с общими целями и задачами. Если вы ищете перспективную, высокооплачиваемую работу, готовы стать частью сплоченного, дружного коллектива, мы вас ждем. Мы создаем такие условия, которые позволяют нашим сотрудникам совершенствоваться, повышать квалификацию, приобретать новый опыт и знания. Для работников постоянно проводятся различные занятия.</b></div>
-            <div class="career__right"><b class="career__right-title">Преимущества работы в Fire Drop:</b>
-              <ul class="section-list"> 
-                <li class="section-item">Спокойная атмосфера</li>
-                <li class="section-item">Достойная оплата труда</li>
-                <li class="section-item">Возможности для карьерного роста</li>
-                <li class="section-item">Интересные задачи</li>
-                <li class="section-item">Благоприятные условия работы.</li>
-              </ul>
-              <p>Мы ищем профессионалов, заинтересованных в том, что они делают. Отправляйте резюме нам на электронную почту. Будем рады вас видеть в нашей команде!</p>
+            <div class="conctacts__left">
+              <div class="conctacts__left-map"> 
+                <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa912fed244505713c859c7d49bf38aed4791b86e73cc4873fa47a9d3ccfd0fad&amp;amp;width=100%25&amp;amp;height=100%25&amp;amp;lang=ru_RU&amp;amp;"></script>
+              </div>
+            </div>
+            <div class="conctacts__right">
+              <dl class="conctacts__list">
+                <dt>Адрес</dt>
+                <dd>г. Тула, улица Новотульская, д. 13, литер В3</dd>
+                <dt>Телефон</dt>
+                <dd> <a href="tel:+74953637026" title="Позвонить на номер +7 (495) 363 70 26">+7 (495) 363 70 26</a></dd>
+                <dt>E-mail</dt>
+                <dd> <a href="mailto:info@fire-drop.ru" title="Написать на почту info@fire-drop.ru">info@fire-drop.ru</a></dd>
+              </dl>
             </div>
           </div>
         </div>
       </section>
-      <section class="vacancy">
-        <div class="container">
-          <h2 class="title-h2">Наши вакансии</h2>
-          <ul class="vacancy__list">
-            <li class="vacancy__item">
-              <div class="vacancy__left"> 
-                <time class="newspage__date" datetime="2021-01-21">22 января 2021</time>
-              </div>
-              <div class="vacancy__right"><b class="vacancy__right-title">Менеджер по продажам</b>
-                <p class="vacancy__right-text">В связи с плановой сменой экипажей и активным расширением компании приглашаем на работу электромехаников.</p><a class="button" href="menendjer-po-prodazham.html">Подробнее</a>
-              </div>
-            </li>
-            <li class="vacancy__item">
-              <div class="vacancy__left"> 
-                <time class="newspage__date" datetime="2021-01-21">22 января 2021</time>
-              </div>
-              <div class="vacancy__right"><b class="vacancy__right-title">Инженер-электрик</b>
-                <p class="vacancy__right-text">В связи с плановой сменой экипажей и активным расширением компании приглашаем на работу электромехаников.</p><a class="button" href="menendjer-po-prodazham.html">Подробнее</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="help resume">
+      <section class="help">
         <div class="container"> 
           <div class="row-sb"> 
             <div class="help__left">
-              <h2 class="title-h2">Отправить резюме</h2>
+              <h2 class="title-h2">Обратная связь</h2>
             </div>
             <div class="help__right"><b class="help__right-title">Пожалуйста, заполните форму ниже</b>
               <div class="help__right-form">
                 <input class="input" type="text" placeholder="Ваше имя *" title="Ваше имя" id="formName">
                 <input class="input" type="text" placeholder="Номер телефона *" title="Номер телефона" id="formPhone">
-                <textarea class="input" placeholder="Сопроводительное письмо" title="Сопроводительное письмо" id="formDesc"></textarea>
-                <label class="input-file">
-                  <input type="file" title="Прикрепить резюме" id="formFile"><img src="img/icons/clip.svg" alt=""><span>Прикрепить резюме</span>
-                </label>
+                <textarea class="input" placeholder="Введите сообщение" title="Введите сообщение" id="formDesc"></textarea>
                 <button class="button" id="formSubmit">Отправить заявку</button>
               </div><small class="help__right-personal">Нажимая на кнопку «Отправить», я подтверждаю,<br> что ознакомился с соглашением на обработку <a href="#" target="_blank">персональных данных</a></small>
             </div>

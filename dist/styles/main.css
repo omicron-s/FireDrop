@@ -729,6 +729,13 @@ small {
   margin-bottom: 40px;
 }
 
+.section-subtitle {
+  font-size: 24px;
+  color: #222020;
+  font-weight: 600;
+  margin: 33px 0;
+}
+
 .section-item {
   position: relative;
   padding-left: 28px;
@@ -750,6 +757,15 @@ small {
 
 .section-text {
   margin: 0 0 20px;
+}
+
+.section-text a {
+  color: #374fa3;
+  font-weight: 600;
+}
+
+.section-text a:hover {
+  text-decoration: underline;
 }
 
 .section-img {
@@ -1232,14 +1248,6 @@ textarea.input {
   margin: 0 0 30px;
 }
 
-.work {
-  padding: 40px 0 50px;
-}
-
-.work .title-h2 {
-  margin-bottom: 40px;
-}
-
 .work .button {
   width: 260px;
 }
@@ -1263,10 +1271,6 @@ textarea.input {
 
 .catalog {
   padding: 40px 0 75px;
-}
-
-.catalog .title-h2 {
-  margin-bottom: 40px;
 }
 
 .catalog__list {
@@ -1845,10 +1849,6 @@ textarea.input {
   padding: 40px 0 75px;
 }
 
-.news .title-h2 {
-  margin-bottom: 40px;
-}
-
 .news__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1918,10 +1918,6 @@ textarea.input {
   padding: 40px 0 70px;
 }
 
-.newspage .title-h2 {
-  margin-bottom: 40px;
-}
-
 .newspage__article {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1935,10 +1931,6 @@ textarea.input {
 
 .newspage__article .container-sm .button {
   width: 260px !important;
-}
-
-.newspage__img {
-  margin-bottom: 50px;
 }
 
 .newspage__date {
@@ -1993,6 +1985,7 @@ textarea.input {
   -ms-flex-pack: center;
   justify-content: center;
   width: 40%;
+  margin-right: 40px;
 }
 
 .slider .swiper-slide:last-child {
@@ -2009,6 +2002,22 @@ textarea.input {
 
 .slider .button {
   height: 60px;
+}
+
+.slider.lisence .swiper-slide {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 242px;
+}
+
+.slider.lisence .button {
+  width: 300px;
+}
+
+.swiper-slide__img {
+  margin-bottom: 20px;
 }
 
 .stationAbout .row-sb {
@@ -3032,6 +3041,11 @@ html.fixed .modal-overlay {
     margin-bottom: 30px;
   }
 
+  .section-subtitle {
+    margin: 28px 0;
+    font-size: 20px;
+  }
+
   .section-img {
     margin-bottom: 30px;
   }
@@ -3064,18 +3078,6 @@ html.fixed .modal-overlay {
 
   .vacancy .title-h2 {
     margin-bottom: 50px;
-  }
-
-  .work {
-    padding: 30px 0 40px;
-  }
-
-  .work .title-h2 {
-    margin-bottom: 30px;
-  }
-
-  .catalog {
-    padding: 30px 0 40px;
   }
 
   .help {
@@ -3208,14 +3210,6 @@ html.fixed .modal-overlay {
     width: 40px;
   }
 
-  .news {
-    padding: 30px 0 40px;
-  }
-
-  .newspage {
-    padding: 30px 0 40px;
-  }
-
   .slider {
     padding: 40px 0 80px;
   }
@@ -3230,6 +3224,11 @@ html.fixed .modal-overlay {
 
   .slider .swiper-slide {
     width: 48.5%;
+    margin-right: 30px;
+  }
+
+  .swiper-slide__img {
+    margin-bottom: 15px;
   }
 
   .stationAbout .row-sb {
@@ -3242,10 +3241,6 @@ html.fixed .modal-overlay {
 
   .stationConstruct__title {
     font-size: 20px;
-  }
-
-  .technical {
-    padding: 30px 0 40px;
   }
 
   .technical .title-h2 {
@@ -3358,6 +3353,11 @@ html.fixed .modal-overlay {
     margin-bottom: 20px;
   }
 
+  .section-subtitle {
+    margin: 20px 0;
+    font-size: 18px;
+  }
+
   .section-img {
     margin-bottom: 20px;
   }
@@ -3451,20 +3451,8 @@ html.fixed .modal-overlay {
     flex: 0 1 auto;
   }
 
-  .work {
-    padding: 20px 0 30px;
-  }
-
-  .work .title-h2 {
-    margin-bottom: 20px;
-  }
-
   .work__subtitle {
     margin-bottom: 20px;
-  }
-
-  .catalog {
-    padding: 20px 0 30px;
   }
 
   .catalog__list {
@@ -3732,10 +3720,6 @@ html.fixed .modal-overlay {
     display: none;
   }
 
-  .news {
-    padding: 20px 0 30px;
-  }
-
   .news__list {
     margin: 0 -10px -20px;
   }
@@ -3743,10 +3727,6 @@ html.fixed .modal-overlay {
   .news__card {
     height: 360px;
     margin: 0 10px 50px;
-  }
-
-  .newspage {
-    padding: 20px 0 30px;
   }
 
   .newspage__article {
@@ -3784,6 +3764,7 @@ html.fixed .modal-overlay {
 
   .slider .swiper-slide {
     width: 75%;
+    margin-right: 20px;
   }
 
   .slider .swiper-slide:last-child {
@@ -3796,6 +3777,10 @@ html.fixed .modal-overlay {
 
   .slider .button {
     height: 46px;
+  }
+
+  .swiper-slide__img {
+    margin-bottom: 10px;
   }
 
   .stationAbout .row-sb {
@@ -3827,10 +3812,6 @@ html.fixed .modal-overlay {
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
     margin: 0;
-  }
-
-  .technical {
-    padding: 20px 0 30px;
   }
 
   .technical .title-h2 {

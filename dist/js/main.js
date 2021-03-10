@@ -271,7 +271,6 @@ __webpack_require__.r(__webpack_exports__);
     slidesPerView: 'auto',
     speed: 400,
     // centeredSlides: true,
-    spaceBetween: 20,
     navigation: {
       prevEl: '.slider .swiper-button-prev',
       nextEl: '.slider .swiper-button-next'
@@ -280,14 +279,6 @@ __webpack_require__.r(__webpack_exports__);
       el: '.slider .swiper-pagination',
       type: 'bullets',
       clickable: true
-    },
-    breakpoints: {
-      768: {
-        spaceBetween: 30
-      },
-      1024: {
-        spaceBetween: 40
-      }
     }
   });
 });

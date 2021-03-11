@@ -155,6 +155,60 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "../views/blocks/card-page/card-page.js":
+/*!**********************************************!*\
+  !*** ../views/blocks/card-page/card-page.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  $('.card-page__card-control button.active').prop('disabled', true);
+  $('.card-page__card-img img').attr('src', $('.card-page__card-control button.active img').attr('src'));
+  var active = $('.card-page__buttons button.active');
+
+  if (active != null) {
+    active.prop('disabled', true);
+    $('.card-page__buttons span').css('width', active.width() + 'px');
+  }
+
+  $('.card-page__card-control button').on('click', function () {
+    $(this).siblings('button').removeClass('active').prop('disabled', false);
+    $(this).addClass('active').prop('disabled', true);
+    var img = $(this).children('img').attr('src');
+    $('.card-page__card-img img').attr('src', img);
+  });
+  $('.card-page__buttons button').on('click', function () {
+    $(this).siblings('button').removeClass('active').prop('disabled', false);
+    $('.card-page__text li').removeClass('active');
+    $(this).prop('disabled', true);
+    $(this).addClass('active');
+    var data = this.dataset.set;
+    $('.card-page__text li[data-set=' + data + ']').addClass('active');
+    cardLine();
+    setTimeout(function () {
+      cardLine();
+    }, 100);
+  });
+  var scrollTimeout;
+  $(window).on('resize', function () {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(cardLine, 150);
+  });
+
+  function cardLine() {
+    var line = $('.card-page__buttons span');
+    var buttonWidth = $('.card-page__buttons button.active').width();
+    var offsetX = document.querySelector('.card-page__buttons button.active').offsetLeft;
+    line.css('width', buttonWidth + 'px');
+    line.css('left', offsetX + 'px');
+  }
+});
+
+/***/ }),
+
 /***/ "../views/blocks/main/heading/heading.js":
 /*!***********************************************!*\
   !*** ../views/blocks/main/heading/heading.js ***!
@@ -196,28 +250,21 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "../../node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper */ "../../node_modules/swiper/swiper.esm.js");
-
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "../../node_modules/swiper/swiper.esm.js");
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
-  var active = document.querySelector('.mainServices__right-button.active');
+  var active = $('.mainServices__right-button.active');
 
   if (active != null) {
-    active.disabled = true;
+    active.prop('disabled', true);
   }
 
   $('.mainServices__right-button').on('click', function () {
-    var btns = document.querySelectorAll('.mainServices__right-button');
-    console.log('hey');
-    btns.forEach(function (element) {
-      element.disabled = false;
-    });
+    $('.mainServices__right-button').prop('disabled', false);
     $('.mainServices__right-button').removeClass('active');
     $('.mainServices__service').removeClass('active');
     var data = this.dataset.service;
-    this.disabled = true;
+    $(this).prop('disabled', true);
     $(this).addClass('active');
     $('.mainServices__service[data-service=' + data + ']').addClass('active');
   });
@@ -230,8 +277,8 @@ __webpack_require__.r(__webpack_exports__);
     if (windowWidth < 768) {
       if (!inits) {
         inits = true;
-        swiper__WEBPACK_IMPORTED_MODULE_1__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_1__["Pagination"]]);
-        servSwiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"]('#mainServSlider', {
+        swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__["Pagination"]]);
+        servSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('#mainServSlider', {
           slidesPerView: 1,
           speed: 400,
           spaceBetween: 30,
@@ -359,6 +406,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_main_services_services__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @blocks/main/services/services */ "../views/blocks/main/services/services.js");
 /* harmony import */ var _blocks_trust_trust__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @blocks/trust/trust */ "../views/blocks/trust/trust.js");
 /* harmony import */ var _blocks_slider_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @blocks/slider/slider */ "../views/blocks/slider/slider.js");
+/* harmony import */ var _blocks_card_page_card_page__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @blocks/card-page/card-page */ "../views/blocks/card-page/card-page.js");
 // import $ from 'jquery';
 // import 'core-js/stable/array/for-each';
 // import 'core-js/stable/array/includes';
@@ -367,6 +415,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* полифил для :focus-visible */
 // import 'focus-visible/dist/focus-visible.min';
+
 
 
 
@@ -400,6 +449,7 @@ $(function () {
   Object(_blocks_main_services_services__WEBPACK_IMPORTED_MODULE_2__["default"])();
   Object(_blocks_trust_trust__WEBPACK_IMPORTED_MODULE_3__["default"])();
   Object(_blocks_slider_slider__WEBPACK_IMPORTED_MODULE_4__["default"])();
+  Object(_blocks_card_page_card_page__WEBPACK_IMPORTED_MODULE_5__["default"])();
 });
 
 /***/ })

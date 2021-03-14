@@ -332,6 +332,58 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "../views/blocks/tank/benefits/benefits.js":
+/*!*************************************************!*\
+  !*** ../views/blocks/tank/benefits/benefits.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  $(window).on('resize load', function () {
+    var windowWidth = window.innerWidth;
+
+    if (windowWidth < 768) {
+      return false;
+    }
+
+    var threeLine = document.querySelector('#tankBenefitsThree');
+    var autoLine = document.querySelector('#tankBenefitsAuto');
+    var leftLine = document.querySelector('#tankBenefitsLeft');
+    var qualLine = document.querySelector('#tankBenefitsQual');
+    var hitechLine = document.querySelector('#tankBenefitsHitech');
+    var fastLine = document.querySelector('#tankBenefitsFast');
+    var easyLine = document.querySelector('#tankBenefitsEasy');
+
+    if (windowWidth >= 1024) {
+      dashed(threeLine, '-');
+      dashed(leftLine, '+');
+    } else {
+      dashed(leftLine, '-');
+    }
+
+    dashed(qualLine, '+');
+    dashed(hitechLine, '-');
+    dashed(fastLine, '-');
+    dashed(easyLine, '+');
+    dashed(autoLine, '+');
+
+    function dashed(elem, sign) {
+      var box = elem.querySelector('.tankBenefit__item-line');
+      var x = box.clientWidth;
+      var y = box.clientHeight;
+      var line = box.children[0];
+      line.style.width = Math.sqrt(x * x + y * y) + 'px';
+      var atan2 = 57.33 * Math.atan2(y, x);
+      line.style.transform = 'rotate(' + sign + atan2 + 'deg)';
+    }
+  });
+});
+
+/***/ }),
+
 /***/ "../views/blocks/trust/trust.js":
 /*!**************************************!*\
   !*** ../views/blocks/trust/trust.js ***!
@@ -407,6 +459,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_trust_trust__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @blocks/trust/trust */ "../views/blocks/trust/trust.js");
 /* harmony import */ var _blocks_slider_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @blocks/slider/slider */ "../views/blocks/slider/slider.js");
 /* harmony import */ var _blocks_card_page_card_page__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @blocks/card-page/card-page */ "../views/blocks/card-page/card-page.js");
+/* harmony import */ var _blocks_tank_benefits_benefits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @blocks/tank/benefits/benefits */ "../views/blocks/tank/benefits/benefits.js");
 // import $ from 'jquery';
 // import 'core-js/stable/array/for-each';
 // import 'core-js/stable/array/includes';
@@ -415,6 +468,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* полифил для :focus-visible */
 // import 'focus-visible/dist/focus-visible.min';
+
 
 
 
@@ -451,6 +505,7 @@ $(function () {
   Object(_blocks_slider_slider__WEBPACK_IMPORTED_MODULE_4__["default"])();
   Object(_blocks_card_page_card_page__WEBPACK_IMPORTED_MODULE_5__["default"])();
 });
+Object(_blocks_tank_benefits_benefits__WEBPACK_IMPORTED_MODULE_6__["default"])();
 
 /***/ })
 

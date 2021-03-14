@@ -663,6 +663,10 @@ input:focus {
   outline: none;
 }
 
+p {
+  line-height: 1.2;
+}
+
 small {
   font-size: 12px;
 }
@@ -2297,6 +2301,349 @@ textarea.input {
   margin-left: 30px;
 }
 
+.tankAdvantages {
+  padding: 60px 0 0;
+}
+
+.tankAdvantages .title-h2 {
+  max-width: 710px;
+}
+
+.tankAdvantages__block {
+  padding: 60px 0;
+}
+
+.tankAdvantages__block.reverse {
+  background-color: #f6f7fb;
+}
+
+.tankAdvantages__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tankAdvantages__item:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+.tankAdvantages__item-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 600px;
+  flex: 0 1 600px;
+}
+
+.tankAdvantages__item-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 51px;
+  flex: 0 0 51px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-right: 8px;
+}
+
+.tankAdvantages__item-icon img {
+  max-width: unset;
+  max-height: unset;
+}
+
+.tankAdvantages__item-title {
+  font-weight: 600;
+  font-size: 24px;
+  color: #596088;
+  margin-bottom: 20px;
+}
+
+.tankAdvantages__item-desc {
+  margin: 0 0 15px;
+}
+
+.tankAdvantages__item-right {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 570px;
+  flex: 0 1 570px;
+  margin-left: 30px;
+}
+
+.tankBenefits {
+  padding: 60px 0;
+}
+
+.tankBenefits .title-h2 {
+  max-width: 576px;
+}
+
+.tankBenefits__adv {
+  position: relative;
+  height: 920px;
+  background-position: center 138px;
+  background-repeat: no-repeat;
+  background-image: url("../img/benefits/bg.png");
+}
+
+.tankBenefits__adv.small {
+  background-size: 360px;
+  background-position: center 420px;
+  height: 1050px;
+}
+
+.tankBenefits__adv.small .tankBenefit__item-img {
+  width: 196px;
+  height: 196px;
+  margin-bottom: 20px;
+}
+
+.tankBenefits__adv.small .tankBenefit__item-title {
+  margin-bottom: 20px;
+}
+
+.tankBenefit__item-line {
+  position: absolute;
+}
+
+.tankBenefit__item-line span {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  border-top: 1px dashed #d4d6db;
+}
+
+.tankBenefit__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.tankBenefit__item-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 118px;
+  height: 118px;
+  border: 1px solid #c4c4c4;
+  border-radius: 50%;
+  margin-bottom: 25px;
+}
+
+.tankBenefit__item-title {
+  margin-bottom: 10px;
+  color: #596088;
+  font-size: 24px;
+}
+
+.tankBenefit__item-text {
+  margin: 0;
+}
+
+/* ------------------- */
+
+/* -------------------- */
+
+.tankHeading {
+  padding: 50px 0 90px;
+}
+
+.tankHeading .title-h2 {
+  margin-bottom: 30px;
+}
+
+.tankHeading .button {
+  margin-top: auto;
+}
+
+.tankHeading__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 600px;
+  flex: 0 1 600px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.tankHeading__subtitle {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.tankHeading__text {
+  max-width: 550px;
+  margin: 0 0 60px;
+}
+
+.tankHeading__right {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 550px;
+  flex: 0 1 550px;
+  margin-left: 30px;
+}
+
+.tankHeading__img {
+  padding-left: 14%;
+}
+
+.tankHeading__img-sm {
+  margin-top: -14%;
+  padding-right: 55%;
+}
+
+.options {
+  padding: 60px 0 40px;
+}
+
+.options .title-h2 {
+  max-width: 550px;
+  margin-bottom: 50px;
+}
+
+.options__subtitle {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.options__left {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 450px;
+  flex: 0 1 450px;
+  margin-right: 30px;
+}
+
+.options__right {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 600px;
+  flex: 0 1 600px;
+}
+
+.options__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding-bottom: 25px;
+}
+
+.options__item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  bottom: 8px;
+  left: 20px;
+  width: 1px;
+  border-left: 1px dashed #d4d6db;
+}
+
+.options__right-title {
+  margin-bottom: 50px;
+  display: block;
+}
+
+.options__item-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 25px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 16px;
+  border: 1px solid #d4d6db;
+}
+
+.options__item-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.options__item-title {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.options__item-desc p {
+  margin: 0 0 15px;
+}
+
+.tankTypes {
+  padding: 60px 0 45px;
+  background-color: #f6f7fb;
+}
+
+.tankTypes .title-h2 {
+  margin-bottom: 50px;
+}
+
+.tankTypes__block {
+  margin-bottom: 50px;
+}
+
+.tankTypes__title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #222020;
+  margin-bottom: 30px;
+}
+
+.tankTypes__list {
+  border-top: 1px solid #98a1b7;
+}
+
+.tankTypes__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 80px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #222020;
+  border-bottom: 1px solid #98a1b7;
+}
+
+.tankTypes__item-number {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 250px;
+  flex: 0 1 250px;
+}
+
 .technical {
   padding: 40px 0 60px;
 }
@@ -3307,6 +3654,177 @@ html.fixed .modal-overlay {
     display: none;
   }
 
+  .tankAdvantages__block.reverse .tankAdvantages__item-left {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .tankAdvantages__block.reverse .tankAdvantages__item-right {
+    margin: 0 30px 0 0;
+  }
+
+  .tankAdvantages__block.reverse .tankAdvantages__item-icon {
+    margin-right: 15px;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+
+  .tankBenefit__item {
+    position: absolute;
+    max-width: 320px;
+  }
+
+  #tankBenefitsThree .tankBenefit__item-line {
+    top: 98px;
+    right: 304px;
+    left: 49.5%;
+    height: 334px;
+  }
+
+  #tankBenefitsThree .tankBenefit__item-line span {
+    top: 0;
+    right: 0;
+    -webkit-transform-origin: top right;
+    transform-origin: top right;
+  }
+
+  #tankBenefitsThree .tankBenefit__item {
+    margin-left: 150px;
+    top: 0;
+    right: 0;
+  }
+
+  #tankBenefitsAuto .tankBenefit__item-line {
+    top: 213px;
+    right: 50%;
+    left: 212px;
+    height: 92px;
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+
+  #tankBenefitsAuto .tankBenefit__item-line span {
+    top: 0;
+    left: 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+
+  #tankBenefitsAuto .tankBenefit__item {
+    top: 132px;
+    right: 50%;
+    left: 0;
+    margin-right: 160px;
+  }
+
+  #tankBenefitsLeft .tankBenefit__item-line {
+    top: 530px;
+    right: 494px;
+    left: 50%;
+    height: 127px;
+    -webkit-transform: translateX(-89px);
+    transform: translateX(-89px);
+  }
+
+  #tankBenefitsLeft .tankBenefit__item-line span {
+    top: 0;
+    left: 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+
+  #tankBenefitsLeft .tankBenefit__item {
+    right: 175px;
+    bottom: 0;
+    max-width: 432px;
+  }
+
+  #tankBenefitsQual .tankBenefit__item-line {
+    top: 150px;
+    right: 50%;
+    left: 260px;
+    height: 300px;
+    -webkit-transform: translateX(-80px);
+    transform: translateX(-80px);
+  }
+
+  #tankBenefitsQual .tankBenefit__item-line span {
+    top: 0;
+    left: 0;
+    -webkit-transform-origin: 0;
+    transform-origin: 0;
+  }
+
+  #tankBenefitsQual .tankBenefit__item {
+    top: 0;
+    left: 0;
+  }
+
+  #tankBenefitsHitech .tankBenefit__item-line {
+    top: 150px;
+    right: 374px;
+    left: 50%;
+    height: 300px;
+    -webkit-transform: translateX(70px);
+    transform: translateX(70px);
+  }
+
+  #tankBenefitsHitech .tankBenefit__item-line span {
+    top: 0;
+    right: 0;
+    -webkit-transform-origin: 100%;
+    transform-origin: 100%;
+  }
+
+  #tankBenefitsHitech .tankBenefit__item {
+    top: 0;
+    right: 0;
+  }
+
+  #tankBenefitsFast .tankBenefit__item-line {
+    top: 605px;
+    right: 50%;
+    left: 252px;
+    height: 100px;
+    -webkit-transform: translateX(-68px);
+    transform: translateX(-68px);
+  }
+
+  #tankBenefitsFast .tankBenefit__item-line span {
+    top: 0;
+    right: 0;
+    -webkit-transform-origin: 100%;
+    transform-origin: 100%;
+  }
+
+  #tankBenefitsFast .tankBenefit__item {
+    bottom: 0;
+    left: 0;
+  }
+
+  #tankBenefitsEasy .tankBenefit__item-line {
+    top: 605px;
+    right: 374px;
+    left: 50%;
+    height: 100px;
+    -webkit-transform: translateX(56px);
+    transform: translateX(56px);
+  }
+
+  #tankBenefitsEasy .tankBenefit__item-line span {
+    top: 0;
+    left: 0;
+    -webkit-transform-origin: 0;
+    transform-origin: 0;
+  }
+
+  #tankBenefitsEasy .tankBenefit__item {
+    right: 0;
+    bottom: 0;
+  }
+
   .button-burger {
     display: none;
   }
@@ -3653,6 +4171,106 @@ html.fixed .modal-overlay {
 
   .stationConstruct__title {
     font-size: 20px;
+  }
+
+  .tankAdvantages {
+    padding: 40px 0 0;
+  }
+
+  .tankAdvantages__block {
+    padding: 45px 0;
+  }
+
+  .tankAdvantages__item:not(:last-child) {
+    margin-bottom: 45px;
+  }
+
+  .tankAdvantages__item-icon {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 44px;
+    flex: 0 0 44px;
+    max-width: 44px;
+  }
+
+  .tankAdvantages__item-icon img {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    margin-top: -3px;
+  }
+
+  .tankAdvantages__item-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .tankBenefits {
+    padding: 40px 0;
+  }
+
+  .tankBenefits__adv {
+    height: 800px;
+    background-size: 480px;
+  }
+
+  .tankBenefit__item-title {
+    font-size: 20px;
+  }
+
+  .tankHeading .title-h2 {
+    margin-bottom: 20px;
+  }
+
+  .tankHeading__subtitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .tankHeading__text {
+    margin-bottom: 40px;
+  }
+
+  .options {
+    padding: 40px 0 20px;
+  }
+
+  .options .title-h2 {
+    margin-bottom: 40px;
+    max-width: 450px;
+  }
+
+  .options__subtitle {
+    font-size: 20px;
+  }
+
+  .options__right-title {
+    margin-bottom: 40px;
+  }
+
+  .tankTypes {
+    padding: 40px 0 25px;
+  }
+
+  .tankTypes .title-h2 {
+    margin-bottom: 40px;
+  }
+
+  .tankTypes__block {
+    margin-bottom: 40px;
+  }
+
+  .tankTypes__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .tankTypes__item {
+    height: 70px;
+    font-size: 16px;
+  }
+
+  .tankTypes__item-number {
+    -ms-flex-preferred-size: 180px;
+    flex-basis: 180px;
   }
 
   .technical .title-h2 {
@@ -4326,6 +4944,220 @@ html.fixed .modal-overlay {
     margin: 0;
   }
 
+  .tankAdvantages {
+    padding: 20px 0 0;
+  }
+
+  .tankAdvantages .title-h2 {
+    max-width: 570px;
+    margin: 0 auto;
+  }
+
+  .tankAdvantages__block {
+    padding: 30px 0;
+  }
+
+  .tankAdvantages__list {
+    max-width: 570px;
+    margin: 0 auto;
+  }
+
+  .tankAdvantages__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .tankAdvantages__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .tankAdvantages__item-left {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .tankAdvantages__item-icon {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 32px;
+    flex: 0 0 32px;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    max-width: 32px;
+    margin-right: 0;
+  }
+
+  .tankAdvantages__item-icon img {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    margin-top: -6px;
+  }
+
+  .tankAdvantages__item-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .tankAdvantages__item-right {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    margin: 0 0 15px;
+  }
+
+  .tankAdvantages__item-img img {
+    margin: auto;
+  }
+
+  .tankBenefits {
+    padding: 20px 0;
+  }
+
+  .tankBenefits__adv {
+    height: auto;
+    background-size: 320px;
+    padding-top: 260px;
+    background-position: top;
+  }
+
+  .tankBenefits__adv.small {
+    height: auto;
+    background-size: 320px;
+    padding-top: 260px;
+    background-position: top;
+  }
+
+  .tankBenefits__adv.small .tankBenefit__item-img {
+    margin-bottom: 10px;
+  }
+
+  .tankBenefits__adv.small .tankBenefit__item-title {
+    margin-bottom: 10px;
+  }
+
+  .tankBenefit__item-line {
+    display: none;
+  }
+
+  .tankBenefit__item {
+    margin-bottom: 25px;
+  }
+
+  .tankBenefit__item-img {
+    margin-bottom: 15px;
+  }
+
+  .tankBenefit__item-title {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .tankHeading .title-h2 {
+    margin-bottom: 15px;
+  }
+
+  .tankHeading .row-sb {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .tankHeading__left {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .tankHeading__subtitle {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .tankHeading__text {
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  .tankHeading__right {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    margin: 0 auto 25px;
+  }
+
+  .options {
+    padding: 20px 0 0;
+  }
+
+  .options .title-h2 {
+    margin-bottom: 30px;
+  }
+
+  .options .row-sb {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .options__subtitle {
+    font-size: 16px;
+  }
+
+  .options__left {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+  }
+
+  .options__right {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+  }
+
+  .options__right-title {
+    margin-bottom: 30px;
+  }
+
+  .options__item-number {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  .tankTypes {
+    padding: 20px 0 5px;
+  }
+
+  .tankTypes .title-h2 {
+    margin-bottom: 30px;
+  }
+
+  .tankTypes__block {
+    margin-bottom: 35px;
+  }
+
+  .tankTypes__title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .tankTypes__item {
+    font-size: 13px;
+    height: 60px;
+  }
+
+  .tankTypes__item-number {
+    -ms-flex-preferred-size: 50px;
+    flex-basis: 50px;
+  }
+
   .technical .title-h2 {
     margin-bottom: 30px;
   }
@@ -4621,5 +5453,67 @@ html.fixed .modal-overlay {
 
   .card-page__buttons button.active {
     font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tankAdvantages__block.reverse .tankAdvantages__item-icon {
+    margin-right: 8px;
+  }
+
+  #tankBenefitsThree .tankBenefit__item-line {
+    top: 86px;
+    right: unset;
+    width: 157px;
+    height: 298px;
+  }
+
+  #tankBenefitsThree .tankBenefit__item-line span {
+    width: 336.828px;
+    -webkit-transform: rotate(-62.2549deg);
+    transform: rotate(-62.2549deg);
+  }
+
+  #tankBenefitsThree .tankBenefit__item {
+    left: 50%;
+  }
+
+  #tankBenefitsAuto .tankBenefit__item-line {
+    top: 209px;
+    left: 204px;
+    height: 73px;
+    -webkit-transform: translateX(-89px);
+    transform: translateX(-89px);
+  }
+
+  #tankBenefitsLeft .tankBenefit__item-line {
+    top: 468px;
+    right: 50%;
+    left: 188px;
+    height: 107px;
+    -webkit-transform: translateX(-76px);
+    transform: translateX(-76px);
+  }
+
+  #tankBenefitsLeft .tankBenefit__item-line span {
+    top: unset;
+    right: 0;
+    bottom: 0;
+    -webkit-transform-origin: 0;
+    transform-origin: 0;
+  }
+
+  #tankBenefitsLeft .tankBenefit__item {
+    right: unset;
+    left: 0;
+  }
+
+  #tankBenefitsFast .tankBenefit__item-line {
+    height: 138px;
+  }
+
+  #tankBenefitsEasy .tankBenefit__item-line {
+    right: 368px;
+    height: 138px;
   }
 }

@@ -928,19 +928,24 @@ textarea.input {
 
 .button-close {
   position: relative;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 
 .button-close::before,
 .button-close::after {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 4px;
-  width: 20px;
-  height: 2px;
-  background-color: #3a4b84;
+  top: 11px;
+  left: -4px;
+  width: 37px;
+  height: 6px;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background-color: #fff;
+  border-radius: 2px;
 }
 
 .button-close::before {
@@ -957,7 +962,7 @@ textarea.input {
 .button-close:hover::after,
 .button-close:focus::before,
 .button-close:focus::after {
-  background-color: #4a5fa7;
+  background-color: #be5050;
 }
 
 .page-control {
@@ -2093,6 +2098,49 @@ textarea.input {
 
 .modal-personal .modal__content li {
   margin-bottom: 15px;
+}
+
+.modal-zoom .modal__content {
+  max-width: 1230px;
+}
+
+.modal-zoom .container {
+  width: 100%;
+}
+
+.modal-zoom .row-sb {
+  margin-top: 60px;
+}
+
+.modal-zoom__prev {
+  margin: auto 40px auto 0;
+}
+
+.modal-zoom__next {
+  margin: auto 0 auto 40px;
+}
+
+.modal-zoom__content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  color: #fff;
+}
+
+.modal-zoom__img {
+  width: 100%;
+  border: 5px solid #fff;
+  margin-bottom: 30px;
+}
+
+.modal-zoom__img img {
+  width: 100%;
+}
+
+.modal-zoom__title {
+  font-size: 24px;
+  font-weight: 600;
+  height: 40px;
 }
 
 .news {
@@ -3431,8 +3479,8 @@ html .modal-overlay {
   right: 0;
   bottom: 0;
   left: 0;
-  -webkit-transition: z-index 0s 0.25s, background-color 0.25s;
-  transition: z-index 0s 0.25s, background-color 0.25s;
+  -webkit-transition: z-index 0s 0.2s, background-color 0.2s;
+  transition: z-index 0s 0.2s, background-color 0.2s;
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -3442,9 +3490,9 @@ html.fixed {
 
 html.fixed .modal-overlay {
   z-index: 99;
-  background-color: rgba(0, 0, 0, 0.75);
-  -webkit-transition: z-index 0s 0s, background-color 0.25s;
-  transition: z-index 0s 0s, background-color 0.25s;
+  background-color: rgba(0, 0, 0, 0.78);
+  -webkit-transition: z-index 0s 0s, background-color 0.2s;
+  transition: z-index 0s 0s, background-color 0.2s;
 }
 
 .modal {
@@ -3464,8 +3512,8 @@ html.fixed .modal-overlay {
   overflow: hidden;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  -webkit-transition: margin-top 0.25s;
-  transition: margin-top 0.25s;
+  -webkit-transition: margin-top 0.2s;
+  transition: margin-top 0.2s;
   visibility: hidden;
   margin-top: -30px;
 }
@@ -3488,12 +3536,10 @@ html.fixed .modal-overlay {
   max-height: 100%;
   overflow-y: auto;
   margin: 0 auto;
-  padding: 60px 50px 50px;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   -webkit-transform-origin: top;
   transform-origin: top;
-  background-color: #3a4b84;
   border-radius: 2px;
 }
 
@@ -3594,16 +3640,6 @@ html.fixed .modal-overlay {
   position: absolute;
   top: 10px;
   right: 15px;
-  width: 20px;
-  height: 20px;
-}
-
-.modal__btn .btn-close {
-  position: absolute;
-  right: 0.5px;
-  /* фикс для IE */
-  width: 100%;
-  height: 100%;
 }
 
 .modal.show {
@@ -4850,6 +4886,27 @@ html.fixed .modal-overlay {
     display: none;
   }
 
+  .modal-zoom .row-sb {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .modal-zoom__prev {
+    margin: 0 0 15px;
+  }
+
+  .modal-zoom__next {
+    margin: -61px 0 15px auto;
+  }
+
+  .modal-zoom__content {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+  }
+
   .news__list {
     margin: 0 -10px -20px;
   }
@@ -5436,10 +5493,6 @@ html.fixed .modal-overlay {
   .header__right-phone {
     margin: 0 20px 0 0;
     font-size: 12px;
-  }
-
-  .modal__content {
-    padding: 60px 15px 50px;
   }
 }
 

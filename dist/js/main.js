@@ -301,6 +301,83 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "../views/blocks/modals/modal-zoom/modal-zoom.js":
+/*!*******************************************************!*\
+  !*** ../views/blocks/modals/modal-zoom/modal-zoom.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  $(window).on('load resize', function () {
+    var windowWidth = window.innerWidth;
+
+    if (windowWidth < 400) {
+      $('.work__item-button').prop('disabled', true);
+    } else {
+      $('.work__item-button').prop('disabled', false);
+    }
+  });
+  $('.work__item-button').on('click', function () {
+    $('.work__item-button').parent('li').removeClass('showed');
+    $(this).parent('li').addClass('showed');
+    var src = $(this).siblings('.work__item-img').children('img').attr('src');
+    var title = $(this).siblings('.work__item-text').children('b').text();
+    $('.modal-zoom__img img').attr('src', src);
+    $('.modal-zoom__title b').text(title);
+  });
+  $('.modal-zoom__prev').on('click', function () {
+    var showed = $('.work__item.showed');
+    var prev = showed.prev();
+    changed(prev);
+
+    if (prev.prev().prop('localName') != 'li') {
+      $(this).addClass('swiper-button-disabled');
+      $(this).prop('disabled', true);
+    }
+
+    if (prev.prop('localName') == 'li') {
+      $('.modal-zoom__next').prop('disabled', false);
+      $('.modal-zoom__next').removeClass('swiper-button-disabled');
+    }
+  });
+  $('.modal-zoom__next').on('click', function () {
+    var showed = $('.work__item.showed');
+    var next = showed.next();
+    changed(next);
+
+    if (next.next().prop('localName') != 'li') {
+      $(this).addClass('swiper-button-disabled');
+      $(this).prop('disabled', true);
+    }
+
+    if (next.prop('localName') == 'li') {
+      $('.modal-zoom__prev').prop('disabled', false);
+      $('.modal-zoom__prev').removeClass('swiper-button-disabled');
+    }
+  });
+
+  function changed(el) {
+    if (el.prop('localName') == 'li') {
+      var src = el.children('.work__item-img').children('img').attr('src');
+      $('.modal-zoom__img img').attr('src', src);
+      $('.work__item').removeClass('showed');
+      el.addClass('showed');
+      var title = el.children('.work__item-text');
+
+      if (title != null) {
+        $('.modal-zoom__title b').text(title.children('b').text());
+      } else {
+        $('.modal-zoom__title b').text('');
+      }
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "../views/blocks/slider/slider.js":
 /*!****************************************!*\
   !*** ../views/blocks/slider/slider.js ***!
@@ -444,6 +521,100 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "../views/layouts/modal/modal.js":
+/*!***************************************!*\
+  !*** ../views/layouts/modal/modal.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.find.js */ "../../node_modules/core-js/modules/es.array.find.js");
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  //функция close
+  var modalClose = function modalClose() {
+    $('body, .modal').css('padding-right', 0); // $('.navbar').css('right', 0);
+
+    $('.modal').removeClass('show');
+    $('html').removeClass('fixed');
+    focusUnlock();
+    $('.modal__content').find(':focus').trigger('blur'); //Переход на предыдущий фокус
+
+    $('.modal__content').one('transitionend', function () {
+      $(tabMemory).trigger('focus');
+    }); //Включить запись фокус
+
+    modalIsOpen = false;
+  }; //Focus-lock
+
+
+  var focusLock = function focusLock() {
+    focusElements.prevObject.each(function () {
+      $(this).attr('tabindex', '-1');
+    });
+    focusModalElements.prevObject.each(function () {
+      $(this).attr('tabindex', '0');
+    });
+  }; //Focus-unlock
+
+
+  var focusUnlock = function focusUnlock() {
+    focusElements.prevObject.each(function () {
+      $(this).attr('tabindex', '0');
+    });
+  }; //focusable элементы
+
+
+  var focusElements = $('a[href], button, input, textarea, select').has('focus'); //focusable элементы в modal
+
+  var focusModalElements = $('.modal__content').find('a[href], button, input, textarea, select').has('focus'); // Инициализация переменных, 1-ый элемент по умолчанию и  модалка не открыта
+
+  var tabMemory = focusElements.prevObject.first();
+  var modalIsOpen = false; //При фокусе запоминаем предыдущый элемент, т.к. модалка открывается текущей кнопкой
+
+  $('a[href], button, input, textarea, select').on('focusin', function () {
+    if (!modalIsOpen) {
+      tabMemory = $(this);
+    }
+  }); //открытие модального окна
+
+  $('button[data-modal], a[data-modal]').on('click', function () {
+    var modalName = $(this).attr('data-modal');
+    var body = $('body').width();
+    var scrollWidth = window.innerWidth - body; // let headerTop = $('.header').outerHeight();
+    //Отменяем запоминание текущего фокуса
+
+    modalIsOpen = true; //Удаление всех tabindex
+
+    focusLock(); //Показ модалки
+
+    $('.modal[data-modal="' + modalName + '"]').addClass('show'); //Фиксируем страницу
+
+    $('html').addClass('fixed');
+
+    if (scrollWidth > 0) {
+      $('body, .modal').css('padding-right', scrollWidth); // $('.navbar').css('right', scrollWidth);
+    }
+  }); //Отмена по кнопке "Закрыть" и по фону
+
+  $('.modal__btn button, .modal-overlay').on('click', function () {
+    modalClose();
+  }); //Отмена по Esc
+
+  $(document).on('keydown', function (e) {
+    var keyCode = e.keyCode || e.which;
+
+    if (keyCode === 27) {
+      modalClose();
+    }
+  });
+});
+
+/***/ }),
+
 /***/ "./main.js":
 /*!*****************!*\
   !*** ./main.js ***!
@@ -460,6 +631,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_slider_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @blocks/slider/slider */ "../views/blocks/slider/slider.js");
 /* harmony import */ var _blocks_card_page_card_page__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @blocks/card-page/card-page */ "../views/blocks/card-page/card-page.js");
 /* harmony import */ var _blocks_tank_benefits_benefits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @blocks/tank/benefits/benefits */ "../views/blocks/tank/benefits/benefits.js");
+/* harmony import */ var _blocks_modals_modal_zoom_modal_zoom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @blocks/modals/modal-zoom/modal-zoom */ "../views/blocks/modals/modal-zoom/modal-zoom.js");
+/* harmony import */ var _layouts_modal_modal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @layouts/modal/modal */ "../views/layouts/modal/modal.js");
 // import $ from 'jquery';
 // import 'core-js/stable/array/for-each';
 // import 'core-js/stable/array/includes';
@@ -474,12 +647,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
  // import serv from '@blocks/where/services';
 // import prices from '@blocks/prices/prices';
 // import about from '@blocks/about/about';
 // import shares from '@blocks/shares/shares';
-// import modal from '@layouts/modal/modal';
-// import svg4everybody from 'svg4everybody/dist/svg4everybody.min';
+
+ // import svg4everybody from 'svg4everybody/dist/svg4everybody.min';
 
 $('.nav__item-link').each(function () {
   if (this.href == location.href) {
@@ -504,7 +678,9 @@ $(function () {
   Object(_blocks_trust_trust__WEBPACK_IMPORTED_MODULE_3__["default"])();
   Object(_blocks_slider_slider__WEBPACK_IMPORTED_MODULE_4__["default"])();
   Object(_blocks_card_page_card_page__WEBPACK_IMPORTED_MODULE_5__["default"])();
+  Object(_layouts_modal_modal__WEBPACK_IMPORTED_MODULE_8__["default"])();
 });
+Object(_blocks_modals_modal_zoom_modal_zoom__WEBPACK_IMPORTED_MODULE_7__["default"])();
 Object(_blocks_tank_benefits_benefits__WEBPACK_IMPORTED_MODULE_6__["default"])();
 
 /***/ })

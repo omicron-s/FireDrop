@@ -887,6 +887,11 @@ textarea.input {
   color: #596088;
 }
 
+.input-file-name {
+  display: block;
+  font-size: 13px;
+}
+
 .slider__quantity {
   font-size: 14px;
   color: #fff;
@@ -2251,7 +2256,11 @@ textarea.input {
 }
 
 .resume .input-file {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+}
+
+.resume .input-file-name {
+  margin-bottom: 10px;
 }
 
 .slider {
@@ -2885,12 +2894,11 @@ textarea.input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: -15px -15px 45px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 45px;
 }
 
 .work__item {
@@ -4405,7 +4413,7 @@ html.fixed .modal-overlay {
   }
 
   .work__list {
-    margin: -10px -10px 30px;
+    margin-bottom: 30px;
   }
 
   .work__item {

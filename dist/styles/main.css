@@ -664,7 +664,7 @@ input:focus {
 }
 
 p {
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 small {
@@ -1173,6 +1173,61 @@ textarea.input {
   cursor: default;
 }
 
+.about .title-h2 {
+  margin-bottom: 30px;
+}
+
+.about .about__subtitle {
+  margin-bottom: 50px;
+}
+
+.about .section-text span {
+  color: #3a4b84;
+  font-weight: 500;
+}
+
+.about__subtitle {
+  display: block;
+  max-width: 590px;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.about-types {
+  background-color: #f6f7fb;
+  padding: 60px 0;
+}
+
+.about-types__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about-types__item:not(:last-child) {
+  margin-bottom: 2em;
+}
+
+.about-types__item-number {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 55px;
+  flex: 0 0 55px;
+  color: #3a4b84;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.about-types__item-text {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.about-types__item-text span {
+  color: #3a4b84;
+  font-weight: 500;
+}
+
 .card-page__card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1463,11 +1518,11 @@ textarea.input {
   margin: 0 0 30px;
 }
 
-.work .button {
+.careerWork .button {
   width: 260px;
 }
 
-.work__subtitle {
+.careerWork__subtitle {
   display: block;
   font-weight: 600;
   font-size: 18px;
@@ -1475,11 +1530,11 @@ textarea.input {
   color: #222020;
 }
 
-.work__list {
+.careerWork__list {
   margin-bottom: 40px;
 }
 
-.work__list-title {
+.careerWork__list-title {
   color: #222020;
   margin-bottom: 25px;
 }
@@ -1596,6 +1651,95 @@ textarea.input {
 
 .conctacts__list a:hover {
   text-decoration: underline;
+}
+
+.faq .title-h2 {
+  margin-bottom: 50px;
+}
+
+.faq__list {
+  border-top: 1px solid #d0d6e2;
+  margin-bottom: 60px;
+}
+
+.faq__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 40px 0;
+  border-bottom: 1px solid #d0d6e2;
+}
+
+.faq__item-number {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100px;
+  flex: 0 0 100px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #222020;
+  line-height: 1.4;
+}
+
+.faq__item-text dt {
+  font-weight: 600;
+  color: #222020;
+  font-size: 18px;
+  max-width: 850px;
+  line-height: 1.4;
+}
+
+.faq__item-text dd {
+  margin-top: 20px;
+  display: none;
+  max-width: 720px;
+  margin-left: 0;
+  line-height: 1.25;
+}
+
+.faq__item-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.faq__item-button.active span::after,
+.faq__item-button.active span::before {
+  height: 0;
+}
+
+.faq__item-button span {
+  position: relative;
+  width: 23px;
+  height: 1px;
+  background-color: #3a4b84;
+}
+
+.faq__item-button span::before,
+.faq__item-button span::after {
+  content: "";
+  position: absolute;
+  left: 11px;
+  width: 1px;
+  height: 11px;
+  background-color: #3a4b84;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.faq__item-button span::before {
+  top: 100%;
+}
+
+.faq__item-button span::after {
+  bottom: 100%;
 }
 
 .help {
@@ -2895,11 +3039,12 @@ textarea.input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin-bottom: 45px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: -15px -15px 45px;
 }
 
 .work__item {
@@ -3697,6 +3842,23 @@ html.fixed .modal-overlay {
     margin: auto -8px -8px;
   }
 
+  .faq__item-text {
+    margin-right: 15px;
+  }
+
+  .faq__item-button {
+    width: 47px;
+    height: 47px;
+    margin: -12px 0 -12px auto;
+    border: 1px solid #3a4b84;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+  }
+
+  .faq__item-button:hover {
+    background-color: rgba(0, 0, 0, 0.13);
+  }
+
   #headingPagination {
     display: none;
   }
@@ -4033,6 +4195,19 @@ html.fixed .modal-overlay {
     font-size: 16px;
   }
 
+  .about .about__subtitle {
+    margin-bottom: 40px;
+  }
+
+  .about__subtitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .about-types {
+    padding: 50px 0;
+  }
+
   .card-page__card {
     margin-bottom: 60px;
   }
@@ -4104,6 +4279,38 @@ html.fixed .modal-overlay {
 
   .vacancy .title-h2 {
     margin-bottom: 50px;
+  }
+
+  .faq .title-h2 {
+    margin-bottom: 40px;
+  }
+
+  .faq__list {
+    margin-bottom: 45px;
+  }
+
+  .faq__item {
+    padding: 30px 0;
+  }
+
+  .faq__item-number {
+    -ms-flex-preferred-size: 60px;
+    flex-basis: 60px;
+    font-size: 16px;
+  }
+
+  .faq__item-text dt {
+    font-size: 16px;
+  }
+
+  .faq__item-button span {
+    width: 19px;
+  }
+
+  .faq__item-button span::before,
+  .faq__item-button span::after {
+    left: 9px;
+    height: 9px;
   }
 
   .help {
@@ -4414,7 +4621,7 @@ html.fixed .modal-overlay {
   }
 
   .work__list {
-    margin-bottom: 30px;
+    margin: -10px -10px 30px;
   }
 
   .work__item {
@@ -4556,6 +4763,24 @@ html.fixed .modal-overlay {
     height: 46px;
   }
 
+  .about .about__subtitle {
+    margin-bottom: 30px;
+  }
+
+  .about__subtitle {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .about-types {
+    padding: 40px 0;
+  }
+
+  .about-types__item-number {
+    -ms-flex-preferred-size: 32px;
+    flex-basis: 32px;
+  }
+
   .card-page__card {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4656,7 +4881,7 @@ html.fixed .modal-overlay {
     flex: 0 1 auto;
   }
 
-  .work__subtitle {
+  .careerWork__subtitle {
     margin-bottom: 20px;
   }
 
@@ -4711,6 +4936,51 @@ html.fixed .modal-overlay {
   .conctacts__right {
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
+  }
+
+  .faq .title-h2 {
+    margin-bottom: 30px;
+  }
+
+  .faq__list {
+    margin-bottom: 30px;
+  }
+
+  .faq__item {
+    position: relative;
+    padding: 20px 0;
+  }
+
+  .faq__item-number {
+    -ms-flex-preferred-size: 32px;
+    flex-basis: 32px;
+    font-size: 14px;
+  }
+
+  .faq__item-text dt {
+    font-size: 14px;
+  }
+
+  .faq__item-text dd {
+    margin-top: 10px;
+  }
+
+  .faq__item-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .faq__item-button span {
+    display: none;
+  }
+
+  .faq__item-button span::before,
+  .faq__item-button span::after {
+    left: 7px;
+    height: 7px;
   }
 
   .help {
@@ -5577,6 +5847,12 @@ html.fixed .modal-overlay {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+  .faq__item-button {
+    width: 42px;
+    height: 42px;
+    margin: -10px 0 -10px auto;
+  }
+
   .tankAdvantages__block.reverse .tankAdvantages__item-icon {
     margin-right: 8px;
   }

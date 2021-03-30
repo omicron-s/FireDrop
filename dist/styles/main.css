@@ -1891,7 +1891,6 @@ textarea.input {
 
 .heading__row .swiper-slide {
   width: 100%;
-  min-height: 820px;
   padding: 100px 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4620,7 +4619,6 @@ html.fixed .modal-overlay {
   }
 
   .heading__row .swiper-slide {
-    min-height: 740px;
     padding: 70px 0;
   }
 
@@ -5360,7 +5358,6 @@ html.fixed .modal-overlay {
   }
 
   .heading__row .swiper-slide {
-    min-height: 532px;
     padding: 50px 0;
   }
 

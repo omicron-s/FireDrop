@@ -955,26 +955,23 @@ textarea.input {
 .button-close::after {
   content: "";
   position: absolute;
-  top: 11px;
-  left: -4px;
-  width: 37px;
-  height: 6px;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 25px;
+  height: 1px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  background-color: #fff;
-  border-radius: 2px;
+  background-color: #3a4b84;
 }
 
 .button-close::before {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .button-close::after {
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .button-close:hover::before,
@@ -2416,6 +2413,40 @@ textarea.input {
   margin-bottom: 15px;
 }
 
+.modal-thx .modal__content {
+  width: 100%;
+  max-width: 535px;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 0;
+}
+
+.modal-thx .row {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 310px;
+  text-align: center;
+}
+
+.modal-thx__img {
+  margin-bottom: 20px;
+}
+
+.modal-thx__title {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.modal-thx__subtitle {
+  margin-bottom: 30px;
+}
+
 .modal-zoom .modal__content {
   max-width: 1230px;
 }
@@ -2426,6 +2457,24 @@ textarea.input {
 
 .modal-zoom .row-sb {
   margin-top: 60px;
+}
+
+.modal-zoom .modal__btn {
+  right: 28px;
+}
+
+.modal-zoom .button-close::before,
+.modal-zoom .button-close::after {
+  width: 37px;
+  height: 6px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border-radius: 2px;
+}
+
+.modal-zoom .button-close:not(:hover)::before,
+.modal-zoom .button-close:not(:hover)::after {
+  background-color: #fff;
 }
 
 .modal-zoom__prev {
@@ -3980,8 +4029,8 @@ html.fixed .modal-overlay {
 
 .modal__btn {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 12px;
+  right: 12px;
 }
 
 .modal.show {
@@ -4652,6 +4701,10 @@ html.fixed .modal-overlay {
 
   .mainServices__right-number {
     width: 40px;
+  }
+
+  .modal-thx__title {
+    font-size: 20px;
   }
 
   .slider {
@@ -5433,6 +5486,10 @@ html.fixed .modal-overlay {
 
   .mainServices__right {
     display: none;
+  }
+
+  .modal-thx__title {
+    font-size: 16px;
   }
 
   .modal-zoom .row-sb {

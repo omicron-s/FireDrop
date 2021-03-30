@@ -6,7 +6,7 @@
     <title>Техническая информация</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./img/favicons/favicon.png" type="image/png">
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/main.min.css">
     <script>
       var ua = window.navigator.userAgent.toLowerCase(), is_ie = (/trident/gi).test(ua) || (/msie/gi).test(ua);
       if (is_ie) {
@@ -46,12 +46,33 @@
       <div class="modal__content">
         <div class="container">
           <div class="row-sb"> 
-            <button class="swiper-button-prev modal-zoom__prev"></button>
+            <button class="swiper-button-prev modal-zoom__prev">
+              <svg> 
+                <use href="img/sprites/sprite.svg#arrow-left"></use>
+              </svg>
+            </button>
             <div class="modal-zoom__content"> 
               <div class="modal-zoom__img"> <img src="img/" alt=""></div>
               <div class="modal-zoom__title"> <b></b></div>
             </div>
-            <button class="swiper-button-next modal-zoom__next"></button>
+            <button class="swiper-button-next modal-zoom__next">
+              <svg> 
+                <use href="img/sprites/sprite.svg#arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="modal__btn">
+          <button class="button-close" title="Закрыть" aria-label="Закрыть"></button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal-thx" data-modal="thx" role="dialog" data-no-focus-lock>
+      <div class="modal__content">
+        <div class="container">
+          <div class="row">
+            <div class="modal-thx__img"> <img src="img/icons/good.svg" alt=""></div><b class="modal-thx__title">Спасибо за обращение!</b><span class="modal-thx__subtitle">Наши специалисты свяжутся с вами в ближайшее время</span>
+            <button class="button modal__button-close">Закрыть</button>
           </div>
         </div>
         <div class="modal__btn">
@@ -209,7 +230,7 @@
       </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="./js/vendor.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/vendor.min.js"></script>
+    <script src="./js/main.min.js"></script>
   </body>
 </html>

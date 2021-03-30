@@ -35,13 +35,31 @@
             <button class="button">Обратный звонок</button>
           </div>
           <div class="header__right"><a class="header__right-phone" href="tel:88801231212">8 880 123-12-12</a>
-            <button class="button">Обратный звонок</button>
+            <button class="button" data-modal="form">Обратный звонок</button>
             <button class="button-burger"><span class="top"></span><span class="mid"></span><span class="bot"></span></button>
           </div>
         </div>
       </div>
     </header>
     <div class="modal-overlay"></div>
+    <div class="modal modal-form" data-modal="form" role="dialog" data-no-focus-lock>
+      <div class="modal__content">
+        <div class="container">
+          <div class="row"><b class="help__right-title">Оставьте заявку</b>
+            <div class="help__right-form">
+              <input class="input" type="text" placeholder="Ваше имя *" title="Ваше имя" id="formNameModal">
+              <input class="input" type="text" placeholder="Номер телефона *" title="Номер телефона" id="formPhoneModal">
+              <input class="input" type="email" placeholder="E-mail *" title="E-mail" id="formEmailModal">
+              <textarea class="input" placeholder="Комментарий" title="Комментарий" id="formDescModal"></textarea>
+              <button class="button modal__button-close" id="formSubmitModal" data-modal="thx">Отправить заявку</button>
+            </div><small class="help__right-personal">Нажимая на кнопку «Отправить», я подтверждаю,<br> что ознакомился с соглашением на обработку <a href="#" target="_blank">персональных данных</a></small>
+          </div>
+        </div>
+        <div class="modal__btn">
+          <button class="button-close" title="Закрыть (Esc)" aria-label="Закрыть"></button>
+        </div>
+      </div>
+    </div>
     <div class="modal modal-zoom" data-modal="zoom" role="dialog" data-no-focus-lock>
       <div class="modal__content">
         <div class="container">
@@ -63,7 +81,7 @@
           </div>
         </div>
         <div class="modal__btn">
-          <button class="button-close" title="Закрыть" aria-label="Закрыть"></button>
+          <button class="button-close" title="Закрыть (Esc)" aria-label="Закрыть"></button>
         </div>
       </div>
     </div>
@@ -76,7 +94,7 @@
           </div>
         </div>
         <div class="modal__btn">
-          <button class="button-close" title="Закрыть" aria-label="Закрыть"></button>
+          <button class="button-close" title="Закрыть (Esc)" aria-label="Закрыть"></button>
         </div>
       </div>
     </div>
@@ -234,7 +252,7 @@
                 <input class="input" type="text" placeholder="Номер телефона *" title="Номер телефона" id="formPhone">
                 <input class="input" type="email" placeholder="E-mail *" title="E-mail" id="formEmail">
                 <textarea class="input" placeholder="Комментарий" title="Комментарий" id="formDesc"></textarea>
-                <button class="button" id="formSubmit">Отправить заявку</button>
+                <button class="button" id="formSubmit" data-modal="thx">Отправить заявку</button>
               </div><small class="help__right-personal">Нажимая на кнопку «Отправить», я подтверждаю,<br> что ознакомился с соглашением на обработку <a href="#" target="_blank">персональных данных</a></small>
             </div>
           </div>
@@ -259,7 +277,7 @@
                 </nav>
           </div>
           <div class="footer__right"><a class="footer__right-phone" href="tel:88801231212">8 880 123-12-12</a>
-            <button class="button button--white">Обратный звонок</button>
+            <button class="button button--white" data-modal="form">Обратный звонок</button>
           </div>
         </div>
       </div>

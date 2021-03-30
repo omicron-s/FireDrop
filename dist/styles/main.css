@@ -2378,26 +2378,20 @@ textarea.input {
   left: 0;
 }
 
-.modal-form small {
-  font-size: 11px;
-  color: #595959;
-  margin-bottom: 15px;
+.modal-form .modal__content {
+  background: #fff;
+  text-align: center;
+  padding: 40px 0;
 }
 
-.modal-form small a {
-  text-decoration: underline;
-  color: #3a4b84;
-}
-
-.modal-form small a:hover {
-  color: #4a5fa7;
-}
-
-.modal-form .button--red {
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 100%;
-  height: 56px;
+.modal-form .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .modal.modal-personal {
@@ -2419,6 +2413,8 @@ textarea.input {
   padding: 50px 0;
   background-color: #fff;
   border-radius: 0;
+  -webkit-box-shadow: 0 0 25px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 25px 4px rgba(0, 0, 0, 0.15);
 }
 
 .modal-thx .row {

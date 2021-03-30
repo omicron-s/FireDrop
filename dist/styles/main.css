@@ -1886,12 +1886,13 @@ textarea.input {
 .heading__row .swiper-container {
   width: 100%;
   height: calc(100vh - 87px);
+  min-height: 820px;
 }
 
 .heading__row .swiper-slide {
   width: 100%;
   min-height: 820px;
-  padding: 100px 0 100px;
+  padding: 100px 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2416,7 +2417,7 @@ textarea.input {
 .modal-thx .modal__content {
   width: 100%;
   max-width: 535px;
-  padding: 50px;
+  padding: 50px 0;
   background-color: #fff;
   border-radius: 0;
 }
@@ -4615,10 +4616,12 @@ html.fixed .modal-overlay {
 
   .heading__row .swiper-container {
     height: calc(100vh - 67px);
+    min-height: 740px;
   }
 
   .heading__row .swiper-slide {
     min-height: 740px;
+    padding: 70px 0;
   }
 
   .heading__subtitle {
@@ -5353,10 +5356,12 @@ html.fixed .modal-overlay {
 
   .heading__row .swiper-container {
     height: calc(100vh - 48px);
+    min-height: 432px;
   }
 
   .heading__row .swiper-slide {
     min-height: 532px;
+    padding: 50px 0;
   }
 
   .heading__subtitle {

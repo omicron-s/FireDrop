@@ -2857,12 +2857,22 @@ textarea.input {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  width: 100%;
+}
+
+.tankBenefit__item-img-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: -4px -4px 6px;
 }
 
 .tankBenefit__item-img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -2872,9 +2882,9 @@ textarea.input {
   width: 97px;
   height: 97px;
   overflow: hidden;
+  margin: 4px;
   border: 2px solid #374fa3;
   border-radius: 50%;
-  margin-bottom: 10px;
 }
 
 .tankBenefit__item-img img {
@@ -2890,6 +2900,7 @@ textarea.input {
   margin-bottom: 6px;
   color: #596088;
   font-size: 24px;
+  font-weight: 600;
 }
 
 .tankHeading {
@@ -4200,9 +4211,133 @@ html.fixed .modal-overlay {
 }
 
 @media (min-width: 1200px) {
+  #tankBen1 {
+    top: -50px;
+    left: 820px;
+    max-width: 380px;
+  }
+
+  #tankBen1 .tankBenefit__item-text {
+    padding-left: 8px;
+  }
+
+  #tankBen2 {
+    top: 26px;
+    left: 0;
+    max-width: 350px;
+  }
+
+  #tankBen2 .tankBenefit__item-text {
+    padding-left: 8px;
+  }
+
+  #tankBen3 {
+    top: 136px;
+    left: 902px;
+    max-width: 360px;
+  }
+
+  #tankBen4 {
+    top: 272px;
+    left: 0;
+    max-width: 330px;
+  }
+
+  #tankBen4 .tankBenefit__item-text {
+    padding-left: 8px;
+  }
+
+  #tankBen5 {
+    top: 360px;
+    left: 900px;
+    max-width: 350px;
+  }
+
+  #tankBen6 {
+    top: 594px;
+    left: 882px;
+    max-width: 300px;
+  }
+
+  #tankBen6 .tankBenefit__item-text {
+    padding-left: 0;
+  }
+
+  #tankBen7 {
+    top: 646px;
+    left: 8px;
+    max-width: 330px;
+  }
+
+  #tankBen7 .tankBenefit__item-text {
+    padding-left: 0;
+  }
+
+  #tankBen8 {
+    top: 653px;
+    left: 598px;
+    max-width: 202px;
+  }
+
+  #tankBen8 .tankBenefit__item-text {
+    padding-left: 0;
+  }
+
+  #tankBen9 {
+    top: 775px;
+    left: 418px;
+    max-width: 252px;
+  }
+
+  #tankBen9 .tankBenefit__item-text {
+    padding-left: 0;
+  }
+
+  #tankBen10 {
+    top: 823px;
+    left: 844px;
+    max-width: 382px;
+  }
+
+  #tankBen10 .tankBenefit__item-text {
+    padding-left: 0;
+  }
+
+  #tankBen11 {
+    top: 926px;
+    left: 244px;
+    max-width: 292px;
+  }
+
+  #tankBen11 .tankBenefit__item-text {
+    padding-left: 0;
+  }
+
+  #tankBenb1 {
+    top: 33px;
+    left: 67px;
+  }
+
+  #tankBenb2 {
+    top: 33px;
+    left: 828px;
+  }
+
+  #tankBenb3 {
+    top: 587px;
+    left: 828px;
+  }
+
+  #tankBenb4 {
+    top: 679px;
+    left: 116px;
+  }
+}
+
+@media (min-width: 1340px) {
   .tankBenefits__adv {
     position: relative;
-    height: 1130px;
+    height: 1160px;
     background-position: 330px 140px;
   }
 
@@ -4233,131 +4368,6 @@ html.fixed .modal-overlay {
     position: absolute;
     max-width: 316px;
   }
-
-  #tankBen1 {
-    top: -50px;
-    left: 820px;
-    max-width: 380px;
-  }
-
-  #tankBen1 .tankBenefit__item-text {
-    padding-left: 8px;
-  }
-
-  #tankBen2 {
-    top: 26px;
-    left: 0;
-    max-width: 350px;
-  }
-
-  #tankBen2 .tankBenefit__item-text {
-    padding-left: 8px;
-  }
-
-  #tankBen3 {
-    top: 136px;
-    left: 878px;
-    max-width: 300px;
-  }
-
-  #tankBen3 .tankBenefit__item-text {
-    padding-left: 11px;
-  }
-
-  #tankBen4 {
-    top: 272px;
-    left: 0;
-    max-width: 330px;
-  }
-
-  #tankBen4 .tankBenefit__item-text {
-    padding-left: 8px;
-  }
-
-  #tankBen5 {
-    top: 360px;
-    left: 910px;
-    max-width: 290px;
-  }
-
-  #tankBen5 .tankBenefit__item-text {
-    padding-left: 6px;
-  }
-
-  #tankBen6 {
-    top: 594px;
-    left: 932px;
-    max-width: 300px;
-  }
-
-  #tankBen6 .tankBenefit__item-text {
-    padding-left: 0;
-  }
-
-  #tankBen7 {
-    top: 646px;
-    left: 8px;
-    max-width: 330px;
-  }
-
-  #tankBen7 .tankBenefit__item-text {
-    padding-left: 0;
-  }
-
-  #tankBen8 {
-    top: 736px;
-    left: 488px;
-    max-width: 252px;
-  }
-
-  #tankBen8 .tankBenefit__item-text {
-    padding-left: 0;
-  }
-
-  #tankBen9 {
-    top: 898px;
-    left: 298px;
-    max-width: 252px;
-  }
-
-  #tankBen9 .tankBenefit__item-text {
-    padding-left: 0;
-  }
-
-  #tankBen10 {
-    top: 903px;
-    left: 748px;
-    max-width: 252px;
-  }
-
-  #tankBen10 .tankBenefit__item-text {
-    padding-left: 0;
-  }
-
-  #tankBenb1 {
-    top: 33px;
-    left: 67px;
-  }
-
-  #tankBenb2 {
-    top: 33px;
-    left: 834px;
-  }
-
-  #tankBenb3 {
-    top: 587px;
-    left: 834px;
-  }
-
-  #tankBenb4 {
-    top: 679px;
-    left: 67px;
-  }
-
-  #tankBenb5 {
-    top: 930px;
-    left: 506px;
-  }
 }
 
 @media (max-width: 1599px) {
@@ -4365,6 +4375,17 @@ html.fixed .modal-overlay {
     /* Пока что так */
     -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media (max-width: 1339px) {
+  .tankBenefits__adv {
+    background-size: 350px;
+    background-position: center 0;
+  }
+
+  .tankBenefit__item {
+    margin-bottom: 25px;
   }
 }
 
@@ -4409,15 +4430,6 @@ html.fixed .modal-overlay {
     right: 15px;
     bottom: 15px;
     left: 15px;
-  }
-
-  .tankBenefits__adv {
-    background-size: 350px;
-    background-position: center 0;
-  }
-
-  .tankBenefit__item {
-    margin-bottom: 25px;
   }
 
   .tankTypes__item-img {

@@ -2831,7 +2831,7 @@ textarea.input {
 .tankBenefits__adv {
   padding-top: 300px;
   background-repeat: no-repeat;
-  background-image: url("../img/benefits/bg.png");
+  background-image: url("../img/benefits/bg.jpg");
 }
 
 .tankBenefits__adv.big .tankBenefit__item-img {
@@ -4355,7 +4355,7 @@ html.fixed .modal-overlay {
 
   .tankBenefits__adv.big {
     background-size: 381px;
-    background-position: 412px 424px;
+    background-position: 407px 427px;
     height: 1250px;
   }
 

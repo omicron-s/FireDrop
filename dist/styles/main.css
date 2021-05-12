@@ -1891,10 +1891,20 @@ textarea.input {
 
 .heading__row .swiper-slide {
   width: 100%;
-  padding: 100px 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+}
+
+.heading__row .container-wrapper {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.heading__row .container {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .heading__bg {
@@ -2235,7 +2245,7 @@ textarea.input {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .mainServices__bg {
@@ -4695,8 +4705,9 @@ html.fixed .modal-overlay {
     min-height: 740px;
   }
 
-  .heading__row .swiper-slide {
-    padding: 70px 0;
+  .heading__row .container {
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 
   .heading__subtitle {
@@ -5437,8 +5448,9 @@ html.fixed .modal-overlay {
     min-height: 432px;
   }
 
-  .heading__row .swiper-slide {
-    padding: 50px 0;
+  .heading__row .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .heading__subtitle {
